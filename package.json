@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/GlebLudis/combineReducer#readme",
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@babel/preset-typescript": "^7.15.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
