@@ -2,10 +2,15 @@
   "name": "combinereducer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "lint": "prettier --check . && eslint . --ext .js,.ts && tsc --noEmit",
+    "lint:fix": "prettier --write . && eslint . --fix --ext .js,.ts",
+    "prepare": "husky install",
+    "build": "webpack --mode=production",
+    "start": "webpack serve --mode=development",
+    "deploy": "npm run build && gh-pages -d dist",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,10 +29,12 @@
     "@babel/preset-typescript": "^7.15.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jest": "^24.4.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
@@ -41,7 +48,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,ts}": "eslint --cache --fix --ext .js,.ts",
+    "*.{js,css,md,ts,json}": "prettier --write"
   }
 }
