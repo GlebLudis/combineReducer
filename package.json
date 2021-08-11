@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GlebLudis/combineReducer/issues"
   },
-  "homepage": "https://github.com/GlebLudis/combineReducer#readme"
+  "homepage": "https://github.com/GlebLudis/combineReducer#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
