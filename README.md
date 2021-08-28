@@ -5,6 +5,7 @@
 
 ## Built With
 
+<ul>TypeScript</ul>
 <ul>Redux API</ul>
 <ul>localStorage</ul>
 <ul><a href="https://firebase.google.com">Firebase<a></>
